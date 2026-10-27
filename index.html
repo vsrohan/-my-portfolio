@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Rohan V. S. | Software Developer & AI/ML Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Rohan V. S., third-year B.E. Electronics & VLSI Engineering student at Rajalakshmi Institute of Technology, Chennai. Specializing in Software Development, AI/ML, Computer Vision, and Full-Stack Engineering.">
+  <meta name="keywords" content="Rohan V S, Rohan VS, Software Developer, AI/ML Engineer, Computer Vision, Full-Stack Developer, EyeDR AI, Rajalakshmi Institute of Technology, Chennai, VLSI, PyTorch, FastAPI">
+  <meta name="author" content="Rohan V. S.">
+  <meta name="theme-color" content="#070b19">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vsrohan.github.io/">
+  <meta property="og:title" content="Rohan V. S. | Software Developer & AI/ML Engineer">
+  <meta property="og:description" content="Building Intelligent Solutions Through Code. Explore EyeDR AI, deep learning research, and software projects by Rohan V. S.">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rohan V. S. | Software Developer & AI/ML Engineer">
+  <meta name="twitter:description" content="Third-year Electronics & VLSI Engineering student at RIT Chennai. AI/ML, Computer Vision, and Full-Stack Developer.">
+  <meta name="twitter:image" content="assets/favicon.svg">
+
+  <!-- Favicon Placeholder -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Ambient Background Canvas / Glow Mesh -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Rohan V. S. Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Rohan V. S.</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#achievements" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button id="resume-btn-nav" class="btn btn-outline btn-sm resume-trigger" aria-label="Download Resume">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#education" class="mobile-nav-link">Education</a></li>
+          <li><a href="#achievements" class="mobile-nav-link">Experience &amp; Achievements</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+          <button class="btn btn-primary w-full resume-trigger" id="resume-btn-mobile">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Status Pill Badge -->
+          <div class="status-badge-container">
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              Open for Software & AI/ML Internships
+            </span>
+            <span class="location-pill">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Chennai, India
+            </span>
+          </div>
+
+          <!-- Main Hero Headings -->
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name gradient-text">Rohan V. S.</span>
+          </h1>
+
+          <div class="hero-tagline-wrapper">
+            <h2 class="hero-tagline">Building Intelligent Solutions Through Code.</h2>
+            <div class="hero-role-carousel" aria-label="Dynamic roles">
+              <span class="role-prefix">Specializing in</span>
+              <span class="role-text" id="typewriter-role" aria-live="polite">Software Developer</span>
+              <span class="typewriter-cursor" aria-hidden="true">|</span>
+            </div>
+          </div>
+
+          <p class="hero-description">
+            Full Stack Developer and AI Engineer. Third-year <strong>B.E. in EE (VLSI Design and Technology)</strong> student at <strong>Rajalakshmi Institute of Technology, Chennai</strong>. 1 year of experience in data science and analytics with IDEAS-TIH. Specialized in deep learning, computer vision, and scalable full-stack applications.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
+              <span>View Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            
+            <a href="assets/Rohan_VS_Resume.pdf" download="Rohan_VS_Resume.pdf" class="btn btn-secondary resume-trigger" id="hero-cta-resume">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <a href="#contact" class="btn btn-ghost" id="hero-cta-contact">
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Social Links Row -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <!-- Real Working GitHub Link -->
+            <a href="https://github.com/vsrohan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Rohan's GitHub Profile (opens in new tab)">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- Real Verified LinkedIn Profile Link -->
+            <a href="https://www.linkedin.com/in/rohan-v-s-768969327" target="_blank" rel="noopener noreferrer" class="social-link" id="linkedin-link" aria-label="Rohan's LinkedIn Profile (opens in new tab)">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- Direct Email Link -->
+            <a href="mailto:vsrohan09@gmail.com" class="social-link" aria-label="Send email to Rohan V. S.">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Terminal Showcase Card -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="terminal-card glass-panel">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">rohan@developer-system: ~</span>
+              <span class="terminal-badge">VLSI &bull; AI/ML</span>
+            </div>
+            <div class="terminal-body font-mono">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+              <div class="terminal-response">
+                <span class="t-key">engineer:</span> <span class="t-val">"Rohan V S"</span><br>
+                <span class="t-key">title:</span> <span class="t-accent">"Full Stack Developer | AI Engineer"</span><br>
+                <span class="t-key">degree:</span> <span class="t-val">"B.E. in EE (VLSI Design and Technology)"</span><br>
+                <span class="t-key">institution:</span> <span class="t-val">"Rajalakshmi Institute of Technology, Chennai"</span><br>
+                <span class="t-key">gpa:</span> <span class="t-num">6.25</span> (till 4th semester)
+              </div>
+              
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat experience.json</span></div>
+              <div class="terminal-response">
+                {<br>
+                &nbsp;&nbsp;<span class="t-key">"internship"</span>: <span class="t-str">"Data Science Intern @ IDEAS-TIH, Kolkata"</span>,<br>
+                &nbsp;&nbsp;<span class="t-key">"grade"</span>: <span class="t-accent">"29.5 / 30 (Outstanding)"</span>,<br>
+                &nbsp;&nbsp;<span class="t-key">"focus"</span>: [<span class="t-str">"Python"</span>, <span class="t-str">"EDA on EPC Data"</span>, <span class="t-str">"ML &amp; LLMs"</span>],<br>
+                &nbsp;&nbsp;<span class="t-key">"flagship_project"</span>: <span class="t-accent">"EyeDR-AI (EfficientNet-B0 + React + FastAPI)"</span><br>
+                }
+              </div>
+
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">check-status</span></div>
+              <div class="terminal-status-grid">
+                <div class="t-chip"><span class="t-chip-icon">⚡</span> Full Stack Dev</div>
+                <div class="t-chip"><span class="t-chip-icon">🔬</span> AI &amp; Deep Learning</div>
+                <div class="t-chip"><span class="t-chip-icon">📊</span> Data Science</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Profile &amp; Background</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative glass-panel">
+            <h3 class="about-subtitle">Full Stack Development, Machine Learning &amp; Data Science</h3>
+            <p class="about-p">
+              I am a third-year <strong>B.E. in EE (VLSI Design and Technology)</strong> undergraduate at <strong>Rajalakshmi Institute of Technology, Chennai</strong> with a GPA of <strong>6.25 (till 4th semester)</strong>. I bring <strong>1 year of experience in data science and analytics</strong> gained through an internship at <strong>IDEAS – Institute of Data Engineering, Analytics and Science Foundation (IDEAS-TIH)</strong>, Kolkata.
+            </p>
+            <p class="about-p">
+              During my internship, I achieved an <strong>Outstanding Grade of 29.5 / 30</strong>, spearheading Exploratory Data Analysis (EDA) on EPC industry data using Python, and honing deep competencies in regression, classification, machine learning fundamentals, and LLM concepts.
+            </p>
+            <p class="about-p">
+              Beyond analytics, I build end-to-end applications: fine-tuning deep learning models with PyTorch, deploying asynchronous FastAPI services, and crafting responsive frontend user interfaces with React and Tailwind CSS. My flagship project, <strong>EyeDR AI</strong>, demonstrates this full-stack integration with multi-class retinal grading, Grad-CAM visual explainability, and multilingual reporting.
+            </p>
+
+            <div class="about-principles">
+              <div class="principle-item">
+                <div class="principle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div>
+                  <h4>Industry Data Science (IDEAS-TIH)</h4>
+                  <p>Analyzed real-world EPC industry datasets with Python and ML models, earning a 29.5/30 grade.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div>
+                  <h4>Full-Stack Deep Learning</h4>
+                  <p>Architecting complete AI pipelines from dataset ingestion and CNN modeling to interactive web deployment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Cards Column -->
+          <div class="about-highlights">
+            <div class="highlight-card glass-panel">
+              <div class="highlight-icon-box cyan-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <span class="highlight-label">Academic Profile</span>
+                <h4 class="highlight-value">B.E. in EE (VLSI)</h4>
+                <p class="highlight-desc">Rajalakshmi Institute of Technology, Chennai &bull; GPA: 6.25 (till 4th sem).</p>
+              </div>
+            </div>
+
+            <div class="highlight-card glass-panel">
+              <div class="highlight-icon-box purple-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <span class="highlight-label">Industry Internship</span>
+                <h4 class="highlight-value">IDEAS-TIH Intern</h4>
+                <p class="highlight-desc">1 year in data science, regression, classification, and EDA on EPC data (29.5/30).</p>
+              </div>
+            </div>
+
+            <div class="highlight-card glass-panel">
+              <div class="highlight-icon-box blue-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <span class="highlight-label">Development Focus</span>
+                <h4 class="highlight-value">Full-Stack Systems</h4>
+                <p class="highlight-desc">FastAPI backends, responsive interfaces, RESTful architectures, and database integration.</p>
+              </div>
+            </div>
+
+            <div class="highlight-card glass-panel">
+              <div class="highlight-icon-box emerald-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <span class="highlight-label">Objective</span>
+                <h4 class="highlight-value">Engineering Internships</h4>
+                <p class="highlight-desc">Ready to bring analytical problem-solving and software execution to dynamic tech teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS SECTION ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Technical Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            Organized into clear categories based on active project development and engineering coursework.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Skills Filter Controls -->
+        <div class="skills-filter-bar" role="tablist" aria-label="Skills Category Filter">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+          <button class="filter-tab" data-filter="programming" role="tab" aria-selected="false">Programming</button>
+          <button class="filter-tab" data-filter="ai-ml" role="tab" aria-selected="false">AI &amp; ML</button>
+          <button class="filter-tab" data-filter="frontend" data-filter-alt="backend" role="tab" aria-selected="false">Web (Frontend &amp; Backend)</button>
+          <button class="filter-tab" data-filter="mobile" role="tab" aria-selected="false">App Dev</button>
+          <button class="filter-tab" data-filter="tools" role="tab" aria-selected="false">Tools &amp; Workflow</button>
+        </div>
+
+        <!-- Skills Category Grid (Easily Editable) -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card glass-panel" data-category="programming">
+            <div class="skill-category-header">
+              <div class="category-icon cyan-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Programming</h3>
+                <span class="category-count">Core Languages</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Python</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">SQL</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Java</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">JavaScript</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Artificial Intelligence & Machine Learning -->
+          <div class="skill-category-card glass-panel" data-category="ai-ml">
+            <div class="skill-category-header">
+              <div class="category-icon purple-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
+              <div>
+                <h3 class="category-name">AI / ML &amp; Vision</h3>
+                <span class="category-count">Models &amp; Frameworks</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">PyTorch</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Computer Vision</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">OpenCV</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">CNN</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Deep Learning</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">LLMs</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Machine Learning</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">NumPy &amp; Pandas</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">EfficientNet-B0</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Frontend Development -->
+          <div class="skill-category-card glass-panel" data-category="frontend">
+            <div class="skill-category-header">
+              <div class="category-icon blue-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Frontend</h3>
+                <span class="category-count">User Interfaces</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">React.js</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Tailwind CSS</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">HTML5 &amp; CSS3</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">JavaScript</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 4: Backend & Database -->
+          <div class="skill-category-card glass-panel" data-category="backend">
+            <div class="skill-category-header">
+              <div class="category-icon emerald-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Backend &amp; Database</h3>
+                <span class="category-count">APIs &amp; Data Storage</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">FastAPI</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">MongoDB (Certified)</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">RESTful APIs</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Asynchronous Python</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 5: Mobile App Development -->
+          <div class="skill-category-card glass-panel" data-category="mobile">
+            <div class="skill-category-header">
+              <div class="category-icon cyan-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h3 class="category-name">App Development</h3>
+                <span class="category-count">Cross-Platform</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Flutter (Certified)</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Dart</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 6: Development Tools & Workflow -->
+          <div class="skill-category-card glass-panel" data-category="tools">
+            <div class="skill-category-header">
+              <div class="category-icon amber-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <div>
+                <h3 class="category-name">Tools &amp; Environment</h3>
+                <span class="category-count">Dev Workflow</span>
+              </div>
+            </div>
+            <ul class="skill-badge-list">
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">Git</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">GitHub</span>
+              </li>
+              <li class="skill-badge">
+                <span class="skill-bullet"></span>
+                <span class="skill-name">VS Code</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skills-footer-note">
+          <p><span class="note-pill">Note</span> Skills reflect candidate competencies, active project context, and ongoing academic coursework. Easily customizable in source code.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section projects-section" id="projects">
+      <div id="featured" class="section-anchor" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <div class="featured-badge-top">
+            <span class="star-icon">★</span>
+            <span>Portfolio Showcase</span>
+          </div>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">
+            Deep learning medical screening prototype and mobile healthcare technology startup innovation.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-container">
+          <!-- ==================== PROJECT 1: EyeDR AI ==================== -->
+          <article class="project-showcase-card glass-panel" id="project-eyedr">
+            <div class="project-header-meta">
+              <span class="badge-status badge-success">
+                <span class="pulse-ring"></span>
+                Working Research Prototype
+              </span>
+              <span class="badge-domain">Artificial Intelligence | Machine Learning | Computer Vision</span>
+            </div>
+
+            <div class="project-card-body-grid">
+              <!-- Left Column: Details, Pipeline, Tech Stack, Actions -->
+              <div class="project-primary-col">
+                <h3 class="project-card-title">EyeDR AI — AI-Powered Diabetic Retinopathy Screening</h3>
+
+                <p class="project-card-description">
+                  EyeDR AI is an AI-powered web application that analyzes retinal fundus images to screen for signs of diabetic retinopathy. It uses deep learning to classify images into five severity categories and incorporates image-quality assessment, preprocessing, Grad-CAM visual explanations, confidence analysis, and multilingual report generation.
+                </p>
+
+                <!-- Architecture Pipeline Flow -->
+                <div class="pipeline-block">
+                  <h4 class="pipeline-heading">End-to-End System Pipeline</h4>
+                  <div class="pipeline-flow">
+                    <div class="pipeline-step">
+                      <span class="step-num">01</span>
+                      <span class="step-title">Retinal Image</span>
+                      <span class="step-sub">Fundus Photography</span>
+                    </div>
+                    <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                    <div class="pipeline-step">
+                      <span class="step-num">02</span>
+                      <span class="step-title">Quality Gate</span>
+                      <span class="step-sub">Artifact &amp; Blur Check</span>
+                    </div>
+                    <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                    <div class="pipeline-step highlight-step">
+                      <span class="step-num">03</span>
+                      <span class="step-title">EfficientNet-B0</span>
+                      <span class="step-sub">5-Class Deep Classifier</span>
+                    </div>
+                    <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+                    <div class="pipeline-step">
+                      <span class="step-num">04</span>
+                      <span class="step-title">Grad-CAM &amp; Reports</span>
+                      <span class="step-sub">EN &bull; TA &bull; HI &bull; ML</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Technologies:</span>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">EfficientNet-B0</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                  </div>
+                </div>
+
+                <!-- Action Buttons: Live Demo and View Source Code -->
+                <div class="project-actions-row">
+                  <a href="https://frontend-one-jet-89.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="eyedr-live-demo-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>
+                    <span>Live Demo</span>
+                  </a>
+
+                  <a href="https://github.com/vsrohan/EyeDR-AI" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="eyedr-github-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+
+                <!-- Ethical / Scientific Evaluation Notice -->
+                <div class="clinical-disclaimer">
+                  <div class="disclaimer-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                  <div class="disclaimer-text">
+                    <strong>Reported Evaluation Results Notice:</strong> Five-class classification accuracy: 74.91%. ROC-AUC: 0.9679 for the evaluated referable-diabetic-retinopathy classification task. Presented as an academic research prototype evaluated on a benchmark test set; does not imply clinical validation or medical diagnostic approval.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Evaluation Metrics Dashboard -->
+              <div class="project-secondary-col">
+                <div class="metrics-card glass-panel-inner">
+                  <div class="metrics-card-header">
+                    <span class="metrics-pill">Reported Evaluation Results</span>
+                    <span class="metrics-dataset">Test Set Evaluation</span>
+                  </div>
+
+                  <div class="metrics-grid">
+                    <!-- Metric 1: 5-Class Accuracy -->
+                    <div class="metric-box highlight-metric">
+                      <div class="metric-top">
+                        <span class="metric-label">5-Class Accuracy</span>
+                        <span class="metric-tag">Multi-Class</span>
+                      </div>
+                      <div class="metric-value font-mono">74.91%</div>
+                      <div class="metric-bar-bg">
+                        <div class="metric-bar-fill" style="width: 74.91%;"></div>
+                      </div>
+                      <p class="metric-subtext">Five-class classification accuracy across all severity grades</p>
+                    </div>
+
+                    <!-- Metric 2: ROC-AUC -->
+                    <div class="metric-box highlight-metric">
+                      <div class="metric-top">
+                        <span class="metric-label">ROC-AUC Score</span>
+                        <span class="metric-tag">Referable DR</span>
+                      </div>
+                      <div class="metric-value font-mono">0.9679</div>
+                      <div class="metric-bar-bg">
+                        <div class="metric-bar-fill fill-gradient" style="width: 96.79%;"></div>
+                      </div>
+                      <p class="metric-subtext">Evaluated referable-diabetic-retinopathy task</p>
+                    </div>
+
+                    <!-- Metric 3: Staging Detail -->
+                    <div class="metric-box">
+                      <div class="metric-top">
+                        <span class="metric-label">Severity Categories</span>
+                        <span class="metric-tag">5 Grades</span>
+                      </div>
+                      <div class="metric-value-text font-mono">Grade 0 &rarr; 4</div>
+                      <p class="metric-subtext">No DR, Mild, Moderate, Severe, Proliferative DR</p>
+                    </div>
+
+                    <!-- Metric 4: Explainability -->
+                    <div class="metric-box">
+                      <div class="metric-top">
+                        <span class="metric-label">Visual Explanations</span>
+                        <span class="metric-tag">Saliency</span>
+                      </div>
+                      <div class="metric-value-text font-mono">Grad-CAM</div>
+                      <p class="metric-subtext">Visual lesion heatmap localization</p>
+                    </div>
+                  </div>
+
+                  <!-- Feature summary list -->
+                  <div class="metrics-features-list">
+                    <div class="feat-badge">
+                      <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Image-quality assessment &amp; preprocessing</span>
+                    </div>
+                    <div class="feat-badge">
+                      <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Confidence analysis &amp; model uncertainty</span>
+                    </div>
+                    <div class="feat-badge">
+                      <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Multilingual reports (EN, TA, HI, ML)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==================== PROJECT 2: EyeQ AI ==================== -->
+          <article class="project-showcase-card startup-project-card glass-panel" id="project-eyeq">
+            <div class="project-header-meta">
+              <span class="badge-status badge-planning">
+                <span class="pulse-ring amber-pulse"></span>
+                In Development
+              </span>
+              <span class="badge-domain">Healthcare Technology | Startup Idea | Mobile Application</span>
+            </div>
+
+            <div class="project-card-body-grid">
+              <!-- Left Column: Vision, Clarification, Tech, Status, Action -->
+              <div class="project-primary-col">
+                <h3 class="project-card-title">EyeQ AI — Smartphone-Based Eye Testing Startup</h3>
+
+                <p class="project-card-description">
+                  EyeQ AI is my healthcare technology startup idea focused on developing a smartphone-assisted visual acuity screening solution. The proposed application aims to help users perform vision screening while investigating ways to improve the reliability of test conditions across different smartphones.
+                </p>
+
+                <!-- Crucial Distinction Banner -->
+                <div class="project-distinction-banner">
+                  <div class="distinction-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  </div>
+                  <div class="distinction-text">
+                    <strong>Distinct Focus:</strong> Smartphone-assisted visual acuity screening and test-condition calibration (independent from retinal-image analysis).
+                  </div>
+                </div>
+
+                <!-- Proposed Technologies -->
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Proposed Technologies:</span>
+                  <div class="tech-tags">
+                    <span class="tech-tag purple-tag">Flutter</span>
+                    <span class="tech-tag purple-tag">Dart</span>
+                    <span class="tech-tag purple-tag">SQLite</span>
+                    <span class="tech-tag purple-tag">Firebase</span>
+                    <span class="tech-tag purple-tag">ESP32 with suitable sensors</span>
+                  </div>
+                </div>
+
+                <!-- Action Button: Explore Startup Idea -->
+                <div class="project-actions-row">
+                  <button class="btn btn-secondary eyeq-modal-trigger" id="eyeq-explore-btn" aria-haspopup="dialog" aria-controls="eyeq-modal">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
+                    <span>Explore Startup Idea</span>
+                  </button>
+                </div>
+
+                <!-- Status Callout -->
+                <div class="status-callout-box">
+                  <div class="status-callout-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  </div>
+                  <div class="status-callout-content">
+                    <span class="status-callout-label font-mono">PROJECT STATUS</span>
+                    <p class="status-callout-text">Planning and research completed; implementation has not started.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: 7 Planned Features Checklist -->
+              <div class="project-secondary-col">
+                <div class="startup-features-card glass-panel-inner">
+                  <div class="startup-card-header">
+                    <div class="startup-crest">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <div>
+                      <h4 class="startup-heading">Planned Features</h4>
+                      <span class="startup-sub">Research &amp; Engineering Roadmap</span>
+                    </div>
+                  </div>
+
+                  <ul class="planned-features-list">
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">1</div>
+                      <div class="feature-text">
+                        <strong>Smartphone-based visual acuity screening</strong>
+                        <p>Standardized digital optotype presentation for vision screening.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">2</div>
+                      <div class="feature-text">
+                        <strong>Physical display calibration</strong>
+                        <p>Display calibration algorithms to standardize optotype sizing across variable screen sizes and pixel densities.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">3</div>
+                      <div class="feature-text">
+                        <strong>Investigation of viewing-distance monitoring</strong>
+                        <p>Investigating methods to maintain standardized distance between user and screen.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">4</div>
+                      <div class="feature-text">
+                        <strong>Ambient-light condition checks</strong>
+                        <p>Verifying suitable ambient lighting conditions to ensure test reliability.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">5</div>
+                      <div class="feature-text">
+                        <strong>Test-quality checks</strong>
+                        <p>Assessing test quality and input reliability during vision evaluation.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">6</div>
+                      <div class="feature-text">
+                        <strong>Left-eye and right-eye testing</strong>
+                        <p>Independent monocular screening for both left and right eyes.</p>
+                      </div>
+                    </li>
+                    <li class="planned-feature-item">
+                      <div class="feature-num-bullet">7</div>
+                      <div class="feature-text">
+                        <strong>Screening result reports and test history</strong>
+                        <p>Structured screening result summaries and history tracking over time.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Credentials</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="education-card glass-panel">
+          <div class="education-icon-col">
+            <div class="edu-crest cyan-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="education-content-col">
+            <div class="education-header-row">
+              <div>
+                <h3 class="degree-title">Bachelor of Technology (B.E) in EE (VLSI Design and Technology)</h3>
+                <h4 class="college-title">Rajalakshmi Institute of Technology, Chennai, India</h4>
+              </div>
+              <div class="year-badge font-mono">
+                <span class="year-label">Current: Third Year (09/2024 &ndash; Present)</span>
+                <span class="year-expected">GPA: 6.25 (till 4th semester)</span>
+              </div>
+            </div>
+
+            <p class="education-summary">
+              Undergraduate engineering curriculum at Rajalakshmi Institute of Technology specializing in VLSI design, semiconductor technology, digital electronics, embedded microcontrollers, and computing algorithms. Balancing hardware architectural constraints with high-level software engineering and machine learning.
+            </p>
+
+            <div class="coursework-section">
+              <h5 class="coursework-heading">Relevant Coursework &amp; Academic Foundations:</h5>
+              <div class="coursework-tags">
+                <span class="course-tag">VLSI Design</span>
+                <span class="course-tag">Digital Electronics &amp; Logic Design</span>
+                <span class="course-tag">Microprocessors &amp; Microcontrollers</span>
+                <span class="course-tag">Data Structures &amp; Algorithms</span>
+                <span class="course-tag">Object-Oriented Programming</span>
+                <span class="course-tag">Signals &amp; Systems</span>
+                <span class="course-tag">Embedded Systems</span>
+                <span class="course-tag">Computer Organization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & ACHIEVEMENTS SECTION ==================== -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Professional Development</span>
+          <h2 class="section-title">Experience &amp; Achievements</h2>
+          <p class="section-subtitle">
+            An editable section structured for internships, technical certifications, coding platforms, and milestones.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Card 1: Verified Work Experience (IDEAS-TIH) -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-icon-box cyan-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <div class="achievement-meta">
+              <span class="achieve-tag">Industry Internship &bull; 05/2026 &ndash; 06/2026</span>
+              <h3 class="achieve-title">Data Science Intern</h3>
+              <h4 class="college-title" style="font-size: 0.95rem; margin-bottom: 0.5rem;">IDEAS &ndash; Institute of Data Engineering, Analytics and Science Foundation (IDEAS-TIH), Kolkata</h4>
+            </div>
+            <p class="achieve-desc">
+              Spearheaded Exploratory Data Analysis (EDA) on EPC industry data using Python. Mastered machine learning fundamentals, regression, classification, and Large Language Model (LLM) concepts.
+            </p>
+            <div class="achieve-profiles" style="margin-top: 0.75rem;">
+              <span class="profile-slot" style="color: var(--accent-emerald); font-weight: 700; border-color: rgba(16, 185, 129, 0.3);">
+                ★ Outstanding Grade: 29.5 / 30
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Flagship Project Development (EyeDR AI) -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-icon-box purple-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <div class="achievement-meta">
+              <span class="achieve-tag">Flagship Platform &bull; 09/2026 &ndash; Present</span>
+              <h3 class="achieve-title">EyeDR AI &mdash; Screening Platform</h3>
+            </div>
+            <p class="achieve-desc">
+              Built end-to-end deep learning screening system: image quality assessment, 5-class DR classification, Grad-CAM visual heatmaps, and multilingual reporting in English, Tamil, Hindi &amp; Malayalam with React.js.
+            </p>
+            <div class="achieve-footer">
+              <a href="https://github.com/vsrohan/EyeDR-AI" target="_blank" rel="noopener noreferrer" class="link-inline">
+                View EyeDR-AI on GitHub &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Verified Technical Certifications -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-icon-box emerald-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <div class="achievement-meta">
+              <span class="achieve-tag">Verified Credentials</span>
+              <h3 class="achieve-title">Technical Certifications</h3>
+            </div>
+            <p class="achieve-desc">
+              Accredited professional certifications in cross-platform mobile development and database engineering:
+            </p>
+            <div class="achieve-profiles" style="flex-direction: column; gap: 0.5rem;">
+              <span class="profile-slot" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--electric-cyan);">✓</span>
+                <strong>Flutter Development</strong>
+              </span>
+              <span class="profile-slot" style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--accent-emerald);">✓</span>
+                <strong>MongoDB Basics for Students</strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 4: Coding & Algorithmic Profiles -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-icon-box amber-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            </div>
+            <div class="achievement-meta">
+              <span class="achieve-tag">Problem Solving &bull; Active</span>
+              <h3 class="achieve-title">Algorithms &amp; Data Structures</h3>
+            </div>
+            <p class="achieve-desc">
+              Practicing data structures, algorithmic optimization, and database querying across Python and SQL for high-performance software engineering.
+            </p>
+            <div class="achieve-profiles">
+              <span class="profile-slot">GitHub: <a href="https://github.com/vsrohan" target="_blank" rel="noopener noreferrer" style="color: var(--electric-cyan);">@vsrohan</a></span>
+              <span class="profile-slot">LinkedIn: <a href="https://www.linkedin.com/in/rohan-v-s-768969327" target="_blank" rel="noopener noreferrer" style="color: var(--electric-cyan);">rohan-v-s</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RESUME DOWNLOAD BANNER ==================== -->
+    <section class="section resume-banner-section" id="resume">
+      <div class="container">
+        <div class="resume-banner glass-panel">
+          <div class="resume-banner-content">
+            <div class="resume-badge">Career Profile</div>
+            <h3 class="resume-banner-title">Interested in hiring or collaborating?</h3>
+            <p class="resume-banner-p">
+              Review my technical background, academic coursework in Electronics &amp; VLSI, software projects, and hands-on deep learning experience.
+            </p>
+          </div>
+          <div class="resume-banner-actions">
+            <a href="assets/Rohan_VS_Resume.pdf" download="Rohan_VS_Resume.pdf" class="btn btn-primary btn-lg resume-trigger" id="banner-download-resume">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+            <span class="resume-config-note">Official PDF &bull; Rohan V S</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">
+            Open to software engineering internships, AI/ML roles, and research collaborations.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Contact Information -->
+          <div class="contact-info-col glass-panel">
+            <h3 class="contact-info-title">Let's Connect</h3>
+            <p class="contact-info-desc">
+              Feel free to reach out directly via email, phone, or LinkedIn. I am actively available for software development and data science interviews.
+            </p>
+
+            <div class="contact-methods-list">
+              <!-- Primary Email Card with Copy Action -->
+              <div class="contact-item">
+                <div class="contact-icon cyan-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">Primary Email</span>
+                  <a href="mailto:vsrohan09@gmail.com" class="contact-val">vsrohan09@gmail.com</a>
+                </div>
+                <button class="copy-btn" id="copy-email-btn" data-clipboard="vsrohan09@gmail.com" title="Copy email address" aria-label="Copy email address">
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+
+              <!-- Academic Email Card -->
+              <div class="contact-item">
+                <div class="contact-icon purple-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">College Email</span>
+                  <a href="mailto:rohan.240114@vlsi.ritchennai.edu" class="contact-val">rohan.240114@vlsi.ritchennai.edu</a>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="contact-item">
+                <div class="contact-icon blue-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">Phone Number</span>
+                  <a href="tel:+916380707703" class="contact-val">+91 6380707703</a>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-item">
+                <div class="contact-icon amber-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-val">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-item">
+                <div class="contact-icon emerald-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </div>
+                <div class="contact-text">
+                  <span class="contact-label">Profiles &amp; Code</span>
+                  <div class="contact-social-pills">
+                    <a href="https://github.com/vsrohan" target="_blank" rel="noopener noreferrer" class="social-pill">
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohan-v-s-768969327" target="_blank" rel="noopener noreferrer" class="social-pill">
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-col glass-panel">
+            <h3 class="contact-form-title">Send a Direct Message</h3>
+            <p class="contact-form-desc">
+              Have an internship query or project idea? Send a message below.
+            </p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required autocomplete="name">
+                </div>
+                <span class="form-error" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required autocomplete="email">
+                </div>
+                <span class="form-error" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <div class="input-wrapper">
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Software Engineering Internship Opportunity">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="Hello Rohan, I came across your EyeDR AI project and would like to discuss..." required></textarea>
+                </div>
+                <span class="form-error" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="form-submit-btn">
+                <span>Send Message</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div class="form-notice">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Client-side portfolio: Submissions provide a 1-click email client dispatch and service hookup guidance.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-brand">
+            <span class="brand-bracket">&lt;</span>
+            <span class="brand-name">Rohan V. S.</span>
+            <span class="brand-bracket">/&gt;</span>
+          </a>
+          <p class="footer-bio">
+            Third-year B.E. Electronics &amp; VLSI Engineering student at Rajalakshmi Institute of Technology, Chennai. Building software and AI solutions with precision.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#projects">Projects (EyeDR AI &amp; EyeQ AI)</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Experience &amp; Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-col">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/vsrohan" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rohan-v-s-768969327" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:vsrohan09@gmail.com" class="footer-icon-link" aria-label="Email Rohan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-contact-quick">
+            <span>Chennai, Tamil Nadu, India</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> Rohan V. S. Crafted with semantic HTML5, CSS3, &amp; Vanilla JavaScript.
+        </p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS & TOASTS ==================== -->
+  
+  <!-- Resume Modal (when PDF is placed or configured) -->
+  <div class="modal-overlay" id="resume-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-card glass-panel">
+      <button class="modal-close" id="resume-modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon cyan-glow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <h3 id="resume-modal-title" class="modal-title">Resume Download</h3>
+      </div>
+      <div class="modal-body" id="resume-modal-body">
+        <p>Loading resume details...</p>
+      </div>
+      <div class="modal-footer" id="resume-modal-footer">
+        <button class="btn btn-ghost" id="resume-modal-dismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Demo Placeholder Modal -->
+  <div class="modal-overlay" id="demo-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+    <div class="modal-card glass-panel">
+      <button class="modal-close" id="demo-modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon purple-glow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </div>
+        <h3 id="demo-modal-title" class="modal-title">Live Demo Status</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>EyeDR AI</strong> is an end-to-end research screening prototype. The live web demo is currently in staging environment setup.</p>
+        <p class="modal-subtext">You can inspect the complete source code, PyTorch model pipeline, FastAPI backend, and React UI directly on GitHub:</p>
+        <div class="modal-highlight-box font-mono">
+          https://github.com/vsrohan/EyeDR-AI
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/vsrohan/EyeDR-AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span>Open GitHub Repository</span>
+        </a>
+        <button class="btn btn-ghost" id="demo-modal-dismiss">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EyeQ AI Startup Idea & Architecture Modal -->
+  <div class="modal-overlay" id="eyeq-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="eyeq-modal-title">
+    <div class="modal-card modal-card-lg glass-panel">
+      <button class="modal-close" id="eyeq-modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon purple-glow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        </div>
+        <div>
+          <span class="badge-status badge-planning" style="margin-bottom: 0.35rem; display: inline-flex;">
+            <span class="pulse-ring amber-pulse"></span>
+            In Development
+          </span>
+          <h3 id="eyeq-modal-title" class="modal-title">EyeQ AI — Smartphone-Based Eye Testing Startup</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section-block">
+          <h4 class="modal-section-title">Startup Concept &amp; Mission</h4>
+          <p class="modal-text">
+            EyeQ AI is my healthcare technology startup idea focused on developing a smartphone-assisted visual acuity screening solution. The proposed application aims to help users perform vision screening while investigating ways to improve the reliability of test conditions across different smartphones.
+          </p>
+        </div>
+
+        <div class="modal-section-block">
+          <h4 class="modal-section-title">Planned Features &amp; Investigation Areas</h4>
+          <div class="modal-grid-2">
+            <div class="modal-card-mini">
+              <strong>1. Visual Acuity Screening</strong>
+              <p>Smartphone-based visual acuity screening with standardized digital optotypes.</p>
+            </div>
+            <div class="modal-card-mini">
+              <strong>2. Display Calibration</strong>
+              <p>Physical display calibration to improve optotype sizing across variable screen sizes and pixel densities.</p>
+            </div>
+            <div class="modal-card-mini">
+              <strong>3. Viewing-Distance Monitoring</strong>
+              <p>Investigation of viewing-distance monitoring to maintain consistent user-to-screen distance.</p>
+            </div>
+            <div class="modal-card-mini">
+              <strong>4. Ambient-Light Condition Checks</strong>
+              <p>Verifying ambient-light conditions to prevent glare and test inconsistencies.</p>
+            </div>
+            <div class="modal-card-mini">
+              <strong>5. Test-Quality Checks</strong>
+              <p>Real-time reliability validation during user vision tests.</p>
+            </div>
+            <div class="modal-card-mini">
+              <strong>6. Left-Eye and Right-Eye Testing</strong>
+              <p>Independent monocular testing protocols for left and right eyes.</p>
+            </div>
+            <div class="modal-card-mini" style="grid-column: 1 / -1;">
+              <strong>7. Screening Reports &amp; Test History</strong>
+              <p>Screening result reports and longitudinal test history tracking.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section-block">
+          <h4 class="modal-section-title">Proposed Technologies</h4>
+          <div class="tech-tags">
+            <span class="tech-tag purple-tag">Flutter</span>
+            <span class="tech-tag purple-tag">Dart</span>
+            <span class="tech-tag purple-tag">SQLite</span>
+            <span class="tech-tag purple-tag">Firebase</span>
+            <span class="tech-tag purple-tag">ESP32 with suitable sensors</span>
+          </div>
+        </div>
+
+        <div class="modal-highlight-box">
+          <div class="disclaimer-text">
+            <strong>Project Status:</strong> Planning and research completed; implementation has not started. This is an early-stage healthcare technology startup idea without clinical validation or medical diagnostic approval.
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary" id="eyeq-modal-contact-btn">
+          <span>Discuss Startup Collaboration</span>
+        </a>
+        <button class="btn btn-ghost" id="eyeq-modal-dismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Feedback Modal -->
+  <div class="modal-overlay" id="contact-feedback-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title">
+    <div class="modal-card glass-panel">
+      <button class="modal-close" id="feedback-modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon emerald-glow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 id="feedback-modal-title" class="modal-title">Message Ready to Send</h3>
+      </div>
+      <div class="modal-body" id="feedback-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer" id="feedback-modal-footer">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toast-text">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
